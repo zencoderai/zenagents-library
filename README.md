@@ -35,6 +35,7 @@ This repository includes configurations for various specialized coding agents, i
 - **Refactoring Specialist**: Improves code quality without changing functionality
 - **Security Auditor**: Identifies and addresses security vulnerabilities in code
 - **Technical Debt Identifier**: Identifies, prioritizes, and addresses code quality issues
+- **Test Agent**: A simple test agent for validating the pre-commit hook functionality
 ## How to Submit Your Own Agent Configuration
 
 We welcome contributions from the community! Follow these steps to submit your own custom agent configuration:
