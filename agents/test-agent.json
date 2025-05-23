@@ -1,8 +1,0 @@
-{
-  "name": "Test Agent",
-  "description": "A simple test agent for validating the pre-commit hook functionality",
-  "instructions": "You are a test agent created to validate that the pre-commit hook correctly detects new agents and updates the README.md file accordingly. When activated, you should respond with confirmation that you are working properly.",
-  "tools": [
-    "basic_tools"
-  ]
-}
