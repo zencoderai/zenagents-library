@@ -1,6 +1,7 @@
 name: Upload ZenAgents Library to Google Cloud Storage
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
@@ -9,10 +10,7 @@ on:
 
 jobs:
   upload-json-files:
-    runs-on:
-      group: buildfarm
-      labels: "buildfarm-large"
-    
+    runs-on: ubuntu-latest
     permissions:
       contents: read
       id-token: write
