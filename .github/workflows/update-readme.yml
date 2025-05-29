@@ -1,0 +1,69 @@
+name: Update README with Agent List
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'agents/**'
+  pull_request:
+    branches: [ main ]
+    paths:
+      - 'agents/**'
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        fetch-depth: 0
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
+
+    - name: Update README with latest agents
+      run: python scripts/update_readme.py
+
+    - name: Check for changes
+      id: verify-changed-files
+      run: |
+        if [ -n "$(git status --porcelain)" ]; then
+          echo "changed=true" >> $GITHUB_OUTPUT
+        else
+          echo "changed=false" >> $GITHUB_OUTPUT
+        fi
+
+    - name: Commit and push changes (Push to main)
+      if: steps.verify-changed-files.outputs.changed == 'true' && github.event_name == 'push'
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add README.md
+        git commit -m "Auto-update README with latest agent information [skip ci]"
+        git push
+
+    - name: Commit and push changes (Pull Request)
+      if: steps.verify-changed-files.outputs.changed == 'true' && github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add README.md
+        git commit -m "Auto-update README with latest agent information"
+        git push
+
+    - name: Comment on PR if from fork
+      if: steps.verify-changed-files.outputs.changed == 'true' && github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name != github.repository
+      uses: actions/github-script@v7
+      with:
+        script: |
+          github.rest.issues.createComment({
+            issue_number: context.issue.number,
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            body: '🤖 **README Update Required**\n\nThis PR modifies agent configurations but the README.md is not up to date. Since this is from a fork, the README cannot be automatically updated.\n\n**Please manually run the following command and commit the changes:**\n```bash\npython scripts/update_readme.py\n```\n\nThis will update the README with the latest agent information.'
+          })
