@@ -7,6 +7,7 @@
     "redis",
     "clickhouse",
     "motherduck",
-    "semantic_search"
+    "file_search",
+    "full_text_search"
   ]
 }
