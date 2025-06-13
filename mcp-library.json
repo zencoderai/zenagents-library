@@ -699,23 +699,23 @@
       }
     ]
   },
-  "github": {
+    "github": {
     "name": "GitHub",
-    "description": "Repository management, file operations, and GitHub API integration",
-    "link": "https://github.com/modelcontextprotocol/servers/blob/main/src/github",
-    "icon": "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAAAAACPAi4CAAAEO0lEQVR4AWJgpBAA2i8HaFd6KArvnLRPvc+2bdu2bdu2bdu2bdu2bbOTfxWZZro6c9+/jLcvmzn5soPmnP4DWACIoIjo/wGIMYCFT5GrRIUKJXOniuh6xeivAURAqJx9Nl9/90sTQvv94ebOwQXDA4xbA5Tuifte+SUM+n13ZFqAKHgAB5LO/CyEJlS5Xn5bngHgwQCIEKb/JyGcwl+upq9TIoHICkAM6S8aRzfaeFgU4OYAAhp/ExZyCmcvgJsBOEM/8+HlUkwl2AIDCBgqZ29FWEAgE0BP8VeaBEYBAByVNaF5p6AFHFv+7ogADggJ3nseT2k6+5HKkB1fLm45+Ldw6VcOkD+AiO/2zP9lBCBy4+ty3eWaPO4ck8F+1bMXVxyM/AAcjb3rt40TAY5eb+4uH9i0YvHiFRr1XXj94/iIACPM9NoZAH8AIj4SHk0BA+NArIgEr1i42AARGHoIjz4lgBFA6CQnPQqeM6ksNcH7Ah3lgZoIMjoId1t4NVM+UiWj+8io17FBCoBQSUhddoCZKcR2fVM6gasOsEI/7XfDmwJgP6yf1EM2KABEfSwN/MxnboCQ7L2M+5zKACiqH5vpYObi6C6k6hsA3YTmBacANwcQoj6XizBFBbCFEnDITsxCxBbLyL0hFECog9LYSDArEdrJyNvhoAMQdEM2twezlG+/38RSAJH0TWgRHKCEJrchOUgHRH321w4qysivqVXAU9ncLzhAExn5JZUCCHdPNs9m1sIAGfkhoQ/AwpyTzSdDWHYnWiMjn0YG0wG2jfoJTQyy2sXI+mTPhVFP4hj9CuxidRI5qutvx5XkAxDqCKk7YSwsgA7rgJ5QHaT5oj8YBmZGILQRUloRA8B+XEg565kQiKHgd/0+uBtRBRD6KfmzAwO4kUHEAdT55ssWc8AMgGRfXQnj8hX3ENvzEGRVJCsmUOaVQh9f+1PAeKURlguneBbb1uyg0Jziz4FuuaIE6UfCFhQlR8ddP4Tms3nUTswIyOHKWjtjUqHdnnG+v9/skC7tiz/8FMbEXQX+uRHum+J5kggZnrojNdEGTNLL/RFGHSR/ACHRB5f5M6xo9S9ur/d9+Y9sB4QiTfuZA9zfAaG5e9wWKDDk4J8/v7/2VYuAIQaAGGbMzvK/1a6nV+2JY9XrPqJTpwxgutDe0P94SLWbFCHcOZf3oUCBoELJ0qRRAW3VQutxLHAVIMUR64Fr/cZEgFt2BdBOqTc+pAE3qdIQ/65wauLhhIalK/Uvh0AATbzJDDKrEzlinPHUJL//iKkB1kDTxN0UIPNKlcMxzzWK62ekEaB5TtLmSOCBAZKA6s/0QkMXOnjsv29N4NbVOhGijHWn4MkqoLvLwfd58cGIWQCkiURjHwsxWN3hpkK8mp0eIGKWAGkCUZr0jKY6cLRvHVvvbg2QCIAbXEG6twBYiP599LXQf+aqkLaPxSdDAAAAAElFTkSuQmCC",
-    "author": "modelcontextprotocol",
+    "description": "GitHub's official MCP Server providing seamless integration with GitHub APIs, enabling advanced automation and interaction capabilities",
+    "link": "https://github.com/github/github-mcp-server",
+    "icon": "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAAAAACPAi4CAAAEO0lEQVR4AWJgpBAA2i8HaFd6KArvnLRPvc+2bdu2bdu2bdu2bdu2bbOTfxWZZro6c9+/jLcvmzn5soPmnP4DWACIoIjo/wGIMYCFT5GrRIUKJXOniuh6xeivAURAqJx9Nl9/90sTQvv94ebOwQXDA4xbA5Tuifte+SUM+n13ZFqAKHgAB5LO/CyEJlS5Xn5bngHgwQCIEKb/JyGcwl+upq9TIoHICkAM6S8aRzfaeFgU4OYAAhp/ExZyCmcvgJsBOEM/8+HlUkwl2AIDCBgqZ29FWEAgE0BP8VeaBEYBAByVNaF5p6AFHFv+7ogADggJ3nseT2k6+5HKkB1fLm45+Ldw6VcOkD+AiO/2zP9lBCBy4+ty3eWaPO4ck8F+1bMXVxyM/AAcjb3rt40TAY5eb+4uH9i0YvHiFRr1XXj94/iIACPM9NoZAH8AIj4SHk0BA+NArIgEr1i42AARGHoIjz4lgBFA6CQnPQqeM6ksNcH7Ah3lgZoIMjoId1t4NVM+UiWj+8io17FBCoBQSUhddoCZKcR2fVM6gasOsEI/7XfDmwJgP6yf1EM2KABEfSwN/MxnboCQ7L2M+5zKACiqH5vpYObi6C6k6hsA3YTmBacANwcQoj6XizBFBbCFEnDITsxCxBbLyL0hFECog9LYSDArEdrJyNvhoAMQdEM2twezlG+/38RSAJH0TWgRHKCEJrchOUgHRH321w4qysivqVXAU9ncLzhAExn5JZUCCHdPNs9m1sIAGfkhoQ/AwpyTzSdDWHYnWiMjn0YG0wG2jfoJTQyy2sXI+mTPhVFP4hj9CuxidRI5qutvx5XkAxDqCKk7YSwsgA7rgJ5QHaT5oj8YBmZGILQRUloRA8B+XEg565kQiKHgd/0+uBtRBRD6KfmzAwO4kUHEAdT55ssWc8AMgGRfXQnj8hX3ENvzEGRVJCsmUOaVQh9f+1PAeKURlguneBbb1uyg0Jziz4FuuaIE6UfCFhQlR8ddP4Tms3nUTswIyOHKWjtjUqHdnnG+v9/skC7tiz/8FMbEXQX+uRHum+J5kggZnrojNdEGTNLL/RFGHSR/ACHRB5f5M6xo9S9ur/d9+Y9sB4QiTfuZA9zfAaG5e9wWKDDk4J8/v7/2VYuAIQaAGGbMzvK/1a6nV+2JY9XrPqJTpwxgutDe0P94SLWbFCHcOZf3oUCBoELJ0qRRAW3VQutxLHAVIMUR64Fr/cZEgFt2BdBOqTc+pAE3qdIQ/65wauLhhIalK/Uvh0AATbzJDDKrEzlinPHUJL//iKkB1kDTxN0UIPNKlcMxzzWK62ekEaB5TtLmSOCBAZKA6s/0QkMXOnjsv29N4NbVOhGijHWn4MkqoLvLwfd58cGIWQCkiURjHwsxWN3hpkK8mp0eIGKWAGkCUZr0jKY6cLRvHVvvbg2QCIAbXEG6twBYiF599LXQf+aqkLaPxSdDAAAAAElFTkSuQmCC",
+    "author": "github",
     "configs": [
       {
         "command": "docker",
-        "args": ["run", "-i", "--rm", "-e", "GITHUB_PERSONAL_ACCESS_TOKEN", "mcp/github"],
-        "env": {
-          "GITHUB_PERSONAL_ACCESS_TOKEN": "<YOUR_TOKEN>"
-        }
-      },
-      {
-        "command": "npx",
-        "args": ["-y", "@modelcontextprotocol/server-github"],
+        "args": [
+          "run",
+          "-i",
+          "--rm",
+          "-e",
+          "GITHUB_PERSONAL_ACCESS_TOKEN",
+          "ghcr.io/github/github-mcp-server"
+        ],
         "env": {
           "GITHUB_PERSONAL_ACCESS_TOKEN": "<YOUR_TOKEN>"
         }
@@ -1249,7 +1249,7 @@
   "notion": {
     "name": "Notion",
     "description": "This project implements an MCP server for the Notion API.",
-    "link": "https://github.com/makenotion/notion-mcp-server#readme",
+    "link": "https://github.com/makenotion/notion-mcp-server",
     "icon": "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAAAAACPAi4CAAAEkklEQVR4AWL4TyEYIgYAOK0H6EiWKIzjX9WOkllMsrZt27Zt27Zt2zxY27Zt24677svp6s3rMz79j5ObX25lqESGhfz6+j2ESPgPKBE/Xty9fHr/5oUju7eoWSp3+uQp8w1550pATqt/JvT351d3Lx7eMnNk37Z1yxXNmtRhMzHoS7hezjoDgn4v6tqqdqEMyRx2m4XDTcxsNwFAi28kXAF6mx3OMZMtMG6SdLlKNOo+dOL8dTtP3zwzNweANEeIFBegPTgHuMnmSJo+d5k6bfqMnLZ4+/k7Lz7++humm/49hAN8SCgJJyC8ABhiLz5+8vLdFx//RpGHBNHhJADy3tItoQIh+QHYTpEfva0DIM6CaE0PhBYEGPhECftoYTCAym/lrA4ABxr9JOHzOkVH7AASb5GCDgBjyHKX9AklMjzkx/vndy8f3715ydgBXZvXKlesUMFAgAGDI8kJADiC5j+Lnr9y9uiWeVNG9evYtGbZvKkSxbUHWEycISam7jvWFQADHKmTOALMHLqYDPo4Q0U3AJi332Imiz04Wbrs+crWDAZHTVdALzBustrscROmyF6qasO2PYeOn7l8z6mLNx68/PgjJJJ2m4FabgHwPJXrtuw2YNzSzbuPX7r79O3Xv+GRUYKc+pLSI9ApQpDv3qXyBJhPkD+99biBxTcgvANHySlFey9+fnz54MbFI7d9AnI85O/3909vndn2XRNe1MmYLml8uxl1yZ8N3jbPnSVVwjiBVnQkWQuoBRU45g+gFIWMge+VN7BzU/snBlJGH8CfI4S0KJSZa0Kmn9p/TikJZFS/8A0IIW7EgxpHD5KFFwHSffQDkD0NgpbpOAkDwD0HZBxZf5EwBLB/wiCDABKnloj5PAlDQJZtwYwBHHlCjW2Q4NtYcPUQI40Bwa9D08tDWK8aA+7TLs7UFQpFGAIeErXWDjHZKPAxEQAwBDyNKmQEUGgN5CEqUGlDGwilsnaI5fWNAfTYDrW4yQwBpNAMdQUGMEMAUXghcMg8AQW8AYIuWeAdCMvvEZD1B/MKUBUPwAOS/coE7gUQtArcGbjvABJ+IDWF9nGvG4jwAuB6QCF6EwRYB1/8GkFq7eRAqnfuAbptA9NvEHaggwkMMMfbKQe+ZQZjQLLProAcWAY9EFkZADdZrLYa37RDPM9vtiRqeopcAU3oJAUJ/O3VedT89dsPn74fRUITQq+efy9I611qHSALzQ0WAwjPD8zyw4cUzoBCj4LAAetx8pTQsSfNekBTd3EAltOkeHqKGfrnR/Qj/LXTB7dNTgmGGjpANggcmBYjRv7+/PrRrUunj2xfNnlE307NahXLnCaJwx5oNccCOEMdFyCyHDji9F82e9yQXm0aVCmRM0PyhHFsZg59TI0zhknOgKCPyREL7mL/h3+V/+mygUKnzYjlOqp7ohlgj5swZcaC1Rt3XRtKQg9own+bjtqeZeXgFZXTs3LwiUwrqm2fu3HvqSt3n739/P03uJeGtdu33c/Q0MYzLCmvdvLCdbsPn7p05+nnX3/+Edvx/AdE3779+P333/DpOxMGAN6HGz3bccL+AAAAAElFTkSuQmCC",
     "author": "makenotion",
     "configs": [
@@ -1257,9 +1257,22 @@
         "command": "npx",
         "args": ["-y", "@notionhq/notion-mcp-server"],
         "env": {
-          "OPENAPI_MCP_HEADERS": "{'Authorization': 'Bearer ntn_****', 'Notion-Version': '2022-06-28' }"
+          "OPENAPI_MCP_HEADERS": "{\"Authorization\": \"Bearer ntn_****\", \"Notion-Version\": \"2022-06-28\" }"
         }
+      },
+      {
+      "command": "docker",
+      "args": [
+        "run",
+        "--rm",
+        "-i",
+        "-e", "OPENAPI_MCP_HEADERS",
+        "mcp/notion"
+      ],
+      "env": {
+        "OPENAPI_MCP_HEADERS": "{\"Authorization\":\"Bearer ntn_****\",\"Notion-Version\":\"2022-06-28\"}"
       }
+    }
     ]
   },
   "oceanbase": {
