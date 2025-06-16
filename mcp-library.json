@@ -1780,27 +1780,6 @@
       }
     ]
   },
-  "time": {
-    "name": "Time",
-    "description": "Time and timezone conversion capabilities",
-    "link": "https://github.com/modelcontextprotocol/servers/blob/main/src/time",
-    "icon": "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAhFBMVEVRmrpcob+HudCz0+HI4Orp8vf0+Pv////e7PLT5u59s8uHutDp8vaSwNRnp8OdxtiSv9Rnp8JyrceIuc/p8/f0+fudx9mozN2+2eWozd3T5e2TwNTT5e6Huc/I3+lcoL5coL+z0uDJ4Ore6/GozNze7POSv9PT5u2SwNO92eWozdzJ3+kSspKeAAABtklEQVR4Ae3W1YKrMBSF4QXM8FfS0KbJuLu8//MdF86ETejVsfnusBXbQPSHe/euqpu9/Rba2bypK+1qMW/p26u1i6Uj41aays8ZNPOapGsBwDXrTSVVYdtEAEgHmuAQAI4W6glHAHA89fkTn43rKE8wn0/d4NAS5YQOIAZ9t2rdqb7zEWB0HnwLxF73HST9mpC8bLO3NwD05zIBc5lWAJ3sAHUAtSwOONJYgM4AJ8M5gB8P8AALI+Ai60AeoCN7Fi4BQilgAaQrcwRRpQA5cxqvgcYIsG7LJrguB6yBGw25BUI5wJsLmYCrPACfz3XSEIChc+7YrI1yQCKPAJg8hNNIL6IwBAds9Ia/+x5xqq8CcG9W8oNkRaRevT2WCymPiPZtvWgnGRHpqVjKlwlYqCAAXMms5WcVPJuVLC0AvEb50W9aBOblDkRZtsXvfgewkukMSKHw35jJ5hPgvAzeAckXu2glBAfQadSdvQ/oWoAXqZwAz97YthjP5wk8B/UsnjGfN/YB4Jo6VFK1WTf7YO8bcn7GoBOvqVaRTFxqF9tX+tLJQruqts3JbYLkXpttpXd/tncfAUMEH3cLaJCTAAAAAElFTkSuQmCC",
-    "author": "modelcontextprotocol",
-    "configs": [
-      {
-        "command": "uvx",
-        "args": ["mcp-server-time"]
-      },
-      {
-        "command": "docker",
-        "args": ["run", "-i", "--rm", "mcp/time"]
-      },
-      {
-        "command": "python",
-        "args": ["-m", "mcp_server_time"]
-      }
-    ]
-  },
   "tinybird": {
     "name": "Tinybird",
     "description": "Interact with Tinybird serverless ClickHouse platform",
