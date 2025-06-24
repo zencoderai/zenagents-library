@@ -31,10 +31,10 @@ This repository includes configurations for various specialized coding agents, i
 - **Legacy Code Modernizer**: Transforms outdated codebases into maintainable, modern implementations
 - **Microservice Designer**: Designs distributed systems with proper service boundaries
 - **Performance Optimizer**: Improves code efficiency, speed, and resource utilization
+- **QA Engineer**: Generates comprehensive test plans and test cases for features
 - **Refactoring Specialist**: Improves code quality without changing functionality
 - **Security Auditor**: Identifies and addresses security vulnerabilities in code
 - **Technical Debt Identifier**: Identifies, prioritizes, and addresses code quality issues
-
 ## How to Submit Your Own Agent Configuration
 
 We welcome contributions from the community! Follow these steps to submit your own custom agent configuration:
@@ -46,6 +46,7 @@ We welcome contributions from the community! Follow these steps to submit your o
 ```json
 {
   "name": "Your Agent Name",
+  "description": "Clear, concise description of what your agent does",
   "instructions": "Detailed instructions that define your agent's behavior, expertise, and approach...",
   "tools": [
     "Tool 1",
@@ -55,12 +56,14 @@ We welcome contributions from the community! Follow these steps to submit your o
 }
 ```
 
-2. **Provide Comprehensive Instructions**: The instructions field should include:
-   - A clear identity statement (e.g., "You are SecuritySentinel, a security auditing specialist...")
-   - A numbered list of steps or approaches the agent should follow
-   - Guidance on how the agent should request additional information
-   - Specific output format expectations
-   - Any other behavioral guidance that shapes the agent's expertise
+2. **Provide Clear Description and Comprehensive Instructions**: 
+   - **Description**: A concise, clear description of what your agent does (used in the README) - **REQUIRED**
+   - **Instructions**: Detailed behavioral guidance including:
+     - A clear identity statement (e.g., "You are SecuritySentinel, a security auditing specialist...")
+     - A numbered list of steps or approaches the agent should follow
+     - Guidance on how the agent should request additional information
+     - Specific output format expectations
+     - Any other behavioral guidance that shapes the agent's expertise
 
 3. **Name Your File Appropriately**: Use kebab-case for your filename (e.g., `security-auditor.json`, `performance-optimizer.json`)
 
