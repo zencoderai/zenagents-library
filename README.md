@@ -20,6 +20,7 @@ This repository includes configurations for various specialized coding agents, i
 - **Bug Prediction & Prevention Agent**: Predicts potential bugs and reliability issues in code
 - **Code Explainer**: Analyzes code and explains its functionality, patterns, and design decisions
 - **Code Migration Specialist**: Helps transition between languages, frameworks, or versions
+- **Code Optimizer**: Refactors and restructures code using optimal algorithms, data structures, and design patterns to improve clarity, performance, and maintainability
 - **Coding Tutor**: Provides personalized guidance to improve programming skills
 - **Database Designer**: Creates efficient, scalable data models and access patterns
 - **Debugging Assistant**: Diagnoses and fixes software issues
