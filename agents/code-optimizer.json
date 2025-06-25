@@ -10,11 +10,6 @@
     "requirements",
     "codacy",
     "sequential thinking",
-    "semgrep",
-    "graph_visualizer",
-    "big_o_analyzer",
-    "code_linter",
-    "performance_profiler",
-    "algorithm_library"
+    "semgrep"
   ]
 }
