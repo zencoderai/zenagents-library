@@ -289,6 +289,22 @@
       }
     ]
   },
+  "context7": {
+    "name": "Context7",
+    "description": "Up-to-date code documentation for any library or framework. Get the latest docs, examples, and best practices.",
+    "link": "https://github.com/upstash/context7",
+    "icon": "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",
+    "author": "upstash",
+    "configs": [
+      {
+        "command": "npx",
+        "args": [
+          "-y",
+          "@upstash/context7-mcp@latest"
+        ]
+      }
+    ]
+  },
   "chroma": {
     "name": "Chroma",
     "description": "Embeddings, vector search, document storage, and full-text search with the open-source AI application database",
@@ -1757,6 +1773,34 @@
         "args": ["-y", "tavily-mcp@0.1.4"],
         "env": {
           "TAVILY_API_KEY": "your-api-key-here"
+        }
+      }
+    ]
+  },
+  "taskmaster-ai": {
+    "name": "TaskMaster",
+    "description": "AI-powered task management system that helps break down complex projects into manageable tasks with intelligent prioritization and workflow automation.",
+    "link": "https://github.com/eyaltoledano/claude-task-master",
+    "icon": "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",
+    "author": "eyaltoledano",
+    "configs": [
+      {
+        "command": "npx",
+        "args": [
+          "-y",
+          "--package=task-master-ai",
+          "task-master-ai"
+        ],
+        "env": {
+          "ANTHROPIC_API_KEY": "YOUR_ANTHROPIC_API_KEY_HERE",
+          "PERPLEXITY_API_KEY": "YOUR_PERPLEXITY_API_KEY_HERE",
+          "OPENAI_API_KEY": "YOUR_OPENAI_KEY_HERE",
+          "GOOGLE_API_KEY": "YOUR_GOOGLE_KEY_HERE",
+          "MISTRAL_API_KEY": "YOUR_MISTRAL_KEY_HERE",
+          "OPENROUTER_API_KEY": "YOUR_OPENROUTER_KEY_HERE",
+          "XAI_API_KEY": "YOUR_XAI_KEY_HERE",
+          "AZURE_OPENAI_API_KEY": "YOUR_AZURE_KEY_HERE",
+          "OLLAMA_API_KEY": "YOUR_OLLAMA_API_KEY_HERE"
         }
       }
     ]
