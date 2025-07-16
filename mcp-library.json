@@ -1661,13 +1661,13 @@
   "slack": {
     "name": "Slack",
     "description": "Channel management and messaging capabilities",
-    "link": "https://github.com/modelcontextprotocol/servers/blob/main/src/slack",
+    "link": "https://github.com/zencoderai/slack-mcp-server",
     "icon": "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAIAAAAlC+aJAAAIZUlEQVR4Ae2aBXAiSRfHz93v4p7curu7u7u7u1t2P3c9d40SdzcitclerL71JVq4DITAMAzdfI9JJktuIoQVTuj6F9LzJrzftLx/1+4T5p95cwI4AZwATgAngBPgARtiPxgQ1pkwZr9yPyCM9SbKYKLZG7GjAdjk1DT+dy25+gfN4jLNgf/p+EojNzJPemv31a9m5/xtSf5//n4zlaB0LIOjR0BsQLNLNW5Zqj75xIACwj9X5ZOj+rSBtCb84E72O9GH3GKOBCac9o0/8Rpv3+TMP4lJteNHAGHz9iqtR5ZyXLF6bJF6TJF6fJF6CJ8IzCWKVK1ThS+74xZztHfi2eGpV4akBg9LvTw89fLrvP0biz4xYeRggCoNPbCAGFlEjC5StwlIfLNVh643t8TsKf3GNeYwpD445VKbBiZfDEo4XaGsdzAAT0y9m0eMgbzbq1cusbZCSyOzEdHLCv7rHXecybudoJNXX+ZggHS5sXee5fGPag/QO/8+wHL+ez5xJ7gA0Ol4AAWFJpaoB+QTYzkA61iAFV0ANFxz/C4ULqbcs1SQ8Ugm9VEgZgqtK/+ZAEALE1ITijWw84CCGL2RqZxXqjEiM/0TB8BsJVZSKFdhTJQaU2UWxUspvoqGq5TjAR6sUSb7AfCDAyDm1YQt+32MmIoWU7GSzsRcFVPVTTDz2db9CJRZGwoZqU0VVofXX61Q1ZsQYhiwvQBs9hID3l6tBY/QK4/o3aUgAGpC/wICarPEgGwDuNaWZUhdyYj0K9DpFXsMHMeGok9EejWTBrJ/BAgag89xz1aOKITN3iaNKCI8s1ULyzQaGts+hb6rLXk9an9gwinoH5ISPDD5AngN8Etqo/6BptB/60hwaeNgf+yJxharPbNU/60lbZxCCko7Mu2Kb9yJYVZ2A4zTa7z9/7iZZj8AzILVFU192CLVI8FOuqlCa8JMJS7oohKXwg9lS657xB4dlHzR+irA+MWfAO9tQLSdAHqTeVGZpj+ftTo9EayH1eVNrBd6zzv2RBdeKK6x3D32yOD2AENTg2FGzcn5h4422L+ID15vBn8PVtn21Fk3Shy+rjMzbW/p1y7Rh4emXua60SpVAwQkCis8OSMAltst+sjuq1/DErd/DRSqaN8c1WB+6ywaY4PGMueBgFxV8f3zwG2PmKN9Es8OtUzxYFijcCR4k3dgU/GnCCMGoJIBsCxfEMQMTQnunXTWJfpQvuz2gxYyOFtBNuDv2e2ym53UN4cIzCG+amx3IvtckOcec9Ql+ohP3HHP2GOv8w7MzP6LmNkloUU3lL0QsdM79jhcbZFLzGE4vsE57oEKGW4bB4KG+bCmQru2XLuuolOBf4YYiLScxTiNL72z9+o3sChXF34Ae4vGan/Ml96anv3nZfz3YL8C77204L09Zd8USG+zadgFwMWgMEcmTCGzRSbmFfYcNhp38kcMyERzjpGI6TcgRCHU8orttBJdEGDIlzYbjKwoM+IUSNoE/exduP2fYL8ioxlRGBnaBDlDD/RbiwNuHwCbIZldId34J+GM08JZp4Wzz8Br48j9uszytt9AhJb4fYho3jnh9JMQqc+p4CZglPI1JXuJ3KVE7nJGK5hXrpZBjKZkj1HC52DYNQLEP3iCF+YKnp0jeGWh4JVFgpcXCl5aePuJCdqwnNbnLlI0jjpw78npghfnw9V7EPnyPPV7cdY/r7/9mTzSQxbhIuf52CJpuKss0l1364MHnUL67HLBC7NrXVbU+W+o891Q58fIZz3kqo1hnhBC4qWX7z49oz5gI1yyxPhvrHVbde/FefrcyrZnD9nLY3srEoYqEobYoMGKxCEQL41woaQFDwCAzZL1fxQ8O7c+cFOd7/r7AoAX5mujLQCGH+7WvLWs1mutdQAwCJ6dLdn0ZzPTYOZAKorEoZBZD5Q4XBbhqinZbcb2ulHUTDaOPVTz5jJI6McAz8/T8vIhRhuSLXh5EdPfTjDfhDNPY1j32EjkLJHxfHqWfcsgxASqMudgWmdvHTBQsChrXl1cF9AOoNZnHYyALq3MAvB9luCVxVwAWAyw3LGBhjVC5K2WRXj1HGCoPNoP4LGJtH8NqP4QcveJafUB96cQwAheXVQftAXJ1a0j8GrHACILgBFidNf/KQ17XZE4rIcAw6Shr+mu/+PBjpSEtnHonrtPTav1Xses0fU1by69+8x0zRepLQHa0O4BkFFDZMyUhr0pjx8gjx9smwYCszJ9CqKIBwBgShUtlIuWBMNKFby0ALZRePat2WPcNYCQBYCG9CI1fyPMacsuGe3bjaK8IVJdsAHpxS132wvAMphNiCy72fRNRnN8CS0l2Es9AGCAEa2qJOuiyDoeWR/VmeAqiFaWm7GJzf6BrUQXzXYAx/8Tk10ANDwASpJP1keTjYkWNcRToixEKtini3/aAJQJ8lemT5d8/4I80pORhyzSQ5E0Ui/4/ucwAkwhA4sm43kr4gcxGqyIHyiL9pWGvk7WhvxcAFYwlXhI+yIVqEgahUi5gwGavs9mKzHHSsw63TYC8h9biUHwKo/yoYSpjh6B71gv5NO5F8pd1qEXkvG8yNowBwMYrt0WWNzoOuvsoWbD+UG64Y+sG93DdaNQa+XRQUZlhYMBoMaJlwTffWq65TwA8t8A3rvWdYXg5bkkey6jpHxppDv4e3DIgAEmBwSLGGqzGZkcCoDNjNdQ1A/dA54PfCt4bzg/3HtuFpzjrIPgbCWLeEca4QZrVx7lBy5NmTYZ6cSO3oVYr4GUTarfhQinnWwcexjOQPqscm4gJcnTlOxSZc4Gh6y7/ndkVLfc72gAlgEaJincTLJf4TvXjWBs0mFkaLvzV/7fbZwATgAngBPACeAE+D/MT2ACNnKXjQAAAABJRU5ErkJggg==",
-    "author": "modelcontextprotocol",
+    "author": "Zencoder",
     "configs": [
       {
         "command": "npx",
-        "args": ["-y", "@modelcontextprotocol/server-slack"],
+        "args": ["-y", "@zencoderai/slack-mcp-server"],
         "env": {
           "SLACK_BOT_TOKEN": "xoxb-your-bot-token",
           "SLACK_TEAM_ID": "T01234567",
@@ -1686,7 +1686,7 @@
           "SLACK_TEAM_ID",
           "-e",
           "SLACK_CHANNEL_IDS",
-          "mcp/slack"
+          "zencoderai/slack-mcp"
         ],
         "env": {
           "SLACK_BOT_TOKEN": "xoxb-your-bot-token",
