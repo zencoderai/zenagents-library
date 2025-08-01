@@ -510,6 +510,47 @@
       "documentation": "https://github.com/elevenlabs/elevenlabs-mcp/blob/main/README.md",
       "official": true,
       "verified": true
+    },
+    "elevenlabs-sound-effects": {
+      "name": "ElevenLabs Sound Effects MCP Server",
+      "description": "Community MCP server for generating sound effects from text descriptions using the ElevenLabs Sound Effects API",
+      "repository": "https://github.com/zym9863/elevenlabs-sound-effect-server",
+      "author": "zym9863",
+      "license": "MIT",
+      "language": "TypeScript",
+      "category": "AI/Audio",
+      "tags": ["sound-effects", "audio-generation", "elevenlabs", "mp3", "ambient-sounds"],
+      "installation": {
+        "git": "https://github.com/zym9863/elevenlabs-sound-effect-server.git"
+      },
+      "configuration": {
+        "command": "node",
+        "args": ["dist/index.js"],
+        "env": {
+          "ELEVENLABS_API_KEY": "your-api-key-here"
+        }
+      },
+      "tools": [
+        {
+          "name": "generate_sound_effect",
+          "description": "Generate sound effects from text descriptions and automatically save as MP3 files"
+        }
+      ],
+      "resources": [
+        {
+          "name": "sound_files",
+          "description": "Generated MP3 sound effect files saved to local filesystem"
+        }
+      ],
+      "requirements": {
+        "node": ">=18.0.0",
+        "api_key": "ElevenLabs API key required",
+        "build": "Requires npm install and npm run build"
+      },
+      "documentation": "https://github.com/zym9863/elevenlabs-sound-effect-server/blob/main/README.md",
+      "official": false,
+      "verified": false,
+      "community": true
     }
   }
 }
