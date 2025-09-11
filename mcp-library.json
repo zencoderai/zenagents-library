@@ -1551,6 +1551,21 @@
       }
     ]
   },
+  "ref": {
+    "name": "Ref",
+    "description": "Precise, token-efficient search for public and private documentation.",
+    "link": "https://ref.tools",
+    "author": "ref-tools",
+    "configs": [
+      {
+        "command": "npx",
+        "args": ["ref-tools-mcp"],
+        "env": {
+          "REF_API_KEY": "your-api-key"
+        }
+      }
+    ]
+  },
   "riza": {
     "name": "Riza",
     "description": "Arbitrary code execution and tool-use platform for LLMs by Riza",
