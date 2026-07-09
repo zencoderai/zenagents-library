@@ -1551,6 +1551,22 @@
       }
     ]
   },
+  "ref": {
+    "name": "Ref",
+    "description": "Precise, token-efficient search for public and private documentation.",
+    "link": "https://ref.tools",
+    "icon": "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAANUSURBVHgB7Zq7juowEIZnj06926+gR0CPoAdegEuPoAfxAECPBD2XnksPiJ5LDzwA8ALAA3D4kbxig8NJ4rUTrfNJkRDBwf49Hs9M/Ha9QRrzhzTHF4A0xxeANMcXgDTHF4A0xxeANEd7Af7a+fFwOKRKpUIiBINBen9/v1/RaJTC4TAlEgkKBALkBrYE+Pj4uHf8fD6TUw6Hw9fn5XL59Tkej1Mul7tfKnlzkg5DAHS+Vqt9GxAjnU5TPp+/i2VsdzqdaLfb0XQ65baFhYzHY3UWcRVgv99fPz8/n65ms2mp/WAwuMZisaf2oVDoutlsrioQcoKYLaxjp8DcR6MR11IymQwdj0eSjfAuACcmAkQsFotP30OEcrlMsvHENlgqlbjfw8/ItgJhAX7CWbEtkcdkMiGZeCYQMhPS8xbwUxgdIUMk5rCCZwQwG6jseMAzApiZeiQSIZl4QgBEhLfAh3tPJM6wgicEQJLFA/nBr18CmP1ut8u91263STauCrBYLCiVSnEdYLVaVZIQ2UqHRcFAsda32y3NZrNv6fAjjUaDGx7LQIoAMGkkOY/wUl8jWPMYvGzP/4gUATDTVgIYBD8YLCpCyAzdqApJEQAzietyuZgWPkC/37//zk2kOEEMCk6sXq/TarWiVqvFDXULhYKSnP8VSnYBmDdm2wgrfMiO91+hbBtkDs4IlgcswS2UxgHY2nhVX1ZgdQPlgRCsAGUwI9g6O50OqUa5AHCGvEIogNM0C45k4UooDAvg+QOgemdwLReAL+AVQ1XvDK4mQzB5XiCkcmdwPR1GkMRziqp2BmEBRNcrBg8ReKjYGaRYgN31axYkATs7A1JsLB34EFiPlX4IJ0O8RAf5vl0QJKEdrzyGQc3n85fZovHsAkTD8/Cm+RVCFoDB82YHf+xkaZgFSZjJZDJpWjsEvV7v6Tv0zazYynAkADqEclY2mzW9DzNEh+0sh1dBEp6DGWbPNQ7s9qqe+8z/TYStAxLslbWV6s4jGBBOlwArhx/YWrbyXLY00DeeNa7X65f/Z8sCnAweYPbQzmpbnDAxe2NsfC6Dt51aKaw6OiLjVZhPwjEcvFCxUm36VQI4wT8oSZrjC0Ca4wtAmuMLQJrjC0Ca4wtAmvMP6DFt96GEgPcAAAAASUVORK5CYII=",
+    "author": "ref-tools",
+    "configs": [
+      {
+        "command": "npx",
+        "args": ["ref-tools-mcp"],
+        "env": {
+          "REF_API_KEY": "your-api-key"
+        }
+      }
+    ]
+  },
   "riza": {
     "name": "Riza",
     "description": "Arbitrary code execution and tool-use platform for LLMs by Riza",
