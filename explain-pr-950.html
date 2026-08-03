@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PR #950: Stripe Clock Regression for Interval Switches</title>
+    <style>
+        :root {
+            --bg: #ffffff;
+            --text: #1a1a1a;
+            --accent: #2563eb;
+            --code-bg: #f4f4f5;
+            --border: #e4e4e7;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        h1, h2, h3 { color: var(--accent); margin-top: 2rem; }
+        pre {
+            background: var(--code-bg);
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            border: 1px solid var(--border);
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; font-size: 0.9em; }
+        .quiz {
+            background: #f0f9ff;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            border: 1px solid #bae6fd;
+            margin: 2rem 0;
+        }
+        .quiz-option {
+            display: block;
+            margin: 0.5rem 0;
+            padding: 0.5rem;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 0.25rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .quiz-option:hover { border-color: var(--accent); background: #f8fafc; }
+        .hidden { display: none; }
+        .correct { background: #dcfce7 !important; border-color: #22c55e !important; }
+        .incorrect { background: #fee2e2 !important; border-color: #ef4444 !important; }
+        .callout {
+            border-left: 4px solid var(--accent);
+            padding-left: 1rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <h1>PR #950: Stripe Clock Regression for Interval Switches</h1>
+    
+    <section>
+        <h2>Background: The BONA-1885 Incident</h2>
+        <p>In PR #948, we fixed a subtle bug in <code>extractSubscriptionData.ts</code>. When a user switched intervals (e.g., Monthly → Annual) on the same plan, the billing cycle failed to reset. The app would keep billing against the old period, eventually hitting quota limits prematurely.</p>
+        <p>This happened because Stripe produces a specific invoice shape for "always_invoice" switches: two lines for the <strong>same product</strong>. The first line is a proration credit (negative), and the second is the new charge (positive).</p>
+        <div class="callout">
+            The old code used <code>lines.find(product)</code>, which picked the <strong>credit line</strong>. Since that credit represented the "unused" portion of the old period, its <code>period.end</code> was in the past, causing the app to ignore the invoice for cycle-reset purposes.
+        </div>
+    </section>
+
+    <section>
+        <h2>The Intuition: Real Stripe Evidence</h2>
+        <p>We fixed this by prioritizing non-proration lines. However, we didn't have a test suite driving real Stripe test clocks to prove this "dual-line same-product" shape actually exists in the wild. PR #950 closes that gap.</p>
+        <p>This PR adds tests to the <code>@stripe-clock</code> suite that perform real switches and assert on the resulting invoice structure and DB state.</p>
+    </section>
+
+    <section>
+        <h2>Code Walkthrough</h2>
+        
+        <h3>1. Pinning the Invoice Shape</h3>
+        <p>In <code>fetchPaidSwitchInvoice</code>, we verify exactly what production sees:</p>
+        <pre><code class="language-typescript">expect(invoice.lines.data.length).toBe(2);
+// Both lines must be the same product
+for (const line of invoice.lines.data) {
+  expect(line.pricing?.price_details?.product).toBe(productId);
+}
+// Exactly one is a proration (the credit)
+const credit = invoice.lines.data.find(isProrationLine);
+expect(credit.amount).toBeLessThan(0);
+// The other is the actual charge
+const charge = invoice.lines.data.find((l) => l.id !== credit.id);
+expect(charge.amount).toBeGreaterThan(0);</code></pre>
+
+        <h3>2. Testing Both Directions</h3>
+        <p>The PR tests both Monthly → Annual and Annual → Monthly. This is critical because they fail for different reasons if the logic is wrong:</p>
+        <ul>
+            <li><strong>Monthly → Annual</strong>: The credit ends <em>before</em> the charge. A "first-match" rule (the old bug) picks the credit and stays pinned to the past.</li>
+            <li><strong>Annual → Monthly</strong>: The credit ends <em>after</em> the charge (it was a year-long credit!). A "pick latest period.end" rule would pick the credit, staying pinned to the future.</li>
+        </ul>
+    </section>
+
+    <section class="quiz">
+        <h3>Self-Check Quiz</h3>
+        <div id="q1">
+            <p><strong>1. Why is <code>always_invoice</code> the premise of this regression?</strong></p>
+            <div class="quiz-option" onclick="check(this, true, 'Correct! This behavior forces Stripe to generate the credit/charge pair immediately on one invoice.')">It forces Stripe to generate a proration credit and a new charge on a single invoice.</div>
+            <div class="quiz-option" onclick="check(this, false, 'Incorrect. Stripe creates the invoice, but the app needs to find the right line on it.')">It prevents Stripe from creating an invoice until the next renewal.</div>
+        </div>
+        <div id="q2">
+            <p><strong>2. Why would a "pick latest period.end" rule fail for Annual → Monthly switches?</strong></p>
+            <div class="quiz-option" onclick="check(this, false, 'Incorrect. The monthly charge ends in 1 month.')">The monthly charge ends a year from now.</div>
+            <div class="quiz-option" onclick="check(this, true, 'Correct! The annual credit represents the superseded 1-year period, so it ends much later than the new 1-month charge.')">The annual credit's end date is ~11 months past the new monthly charge's end.</div>
+        </div>
+        <p id="feedback" class="hidden"></p>
+    </section>
+
+    <script>
+        function check(el, isCorrect, msg) {
+            const parent = el.parentElement;
+            const options = parent.querySelectorAll('.quiz-option');
+            options.forEach(opt => opt.classList.remove('correct', 'incorrect'));
+            el.classList.add(isCorrect ? 'correct' : 'incorrect');
+            const feedback = document.getElementById('feedback');
+            feedback.textContent = msg;
+            feedback.classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
