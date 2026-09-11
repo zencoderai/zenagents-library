@@ -188,6 +188,19 @@
       }
     ]
   },
+  "bank statement": {
+    "name": "Bank Statement",
+    "description": "Import a bank CSV export, categorise it, summarise per currency, find recurring charges and reconcile against an expense ledger; everything stays on your machine. Hosted endpoint needs a free token from https://mcp.zovo.one/mcp/connect, substituted for <token> in the args URL.",
+    "link": "https://github.com/theluckystrike/mcp-bank-statement",
+    "icon": "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",
+    "author": "theluckystrike",
+    "configs": [
+      {
+        "command": "npx",
+        "args": ["-y", "mcp-remote", "https://mcp.zovo.one/mcp/bank-statement/t/<token>"]
+      }
+    ]
+  },
   "bankless onchain": {
     "name": "Bankless Onchain",
     "description": "Query Onchain data, like ERC20 tokens, transaction history, smart contract state.",
@@ -453,6 +466,19 @@
       }
     ]
   },
+  "currency": {
+    "name": "Currency",
+    "description": "Live and historical exchange rates from the European Central Bank: convert amounts and read rate history. No API key for the rates, cached locally, works offline. Hosted endpoint needs a free token from https://mcp.zovo.one/mcp/connect, substituted for <token> in the args URL.",
+    "link": "https://github.com/theluckystrike/mcp-currency",
+    "icon": "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAIAAAAlC+aJAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAQKADAAQAAAABAAAAQAAAAABGUUKwAAAE80lEQVRoBe1aW2gUVxiemd3sbnypQalUsSpYCxZpjQajNUWMGHxQq7VqvSAUghdQio8iFIJ9aumDaaNQsRWN4i3xAkbbJlZTtRKpRemDinhJTaImTTbW7GR2dqf/7j97dnZmzuTMDEwInHlYzjnzX7/vXP4zrDhh6TxhJD/SSA4+EztPYLgZ5AxwBnwiwKeQTwB9q3MGfEPo0wBnwCeAvtU5A74h9GmAM+ATQN/qnAHfEPo0EGbX1zRNUZOCxqoRKSoSRRGlU+mUqqawLUlSUdjsV01lHgcBmlezIZpcOp0eM7qkpvqLWCRKkzGOqyn1ywN7O7ufh6RQUk1WL187//3ZAAHInLn6y+nLF412lGSy9N33dqzehAk/7er46qfvU+k0yd9o2dRmTQB8F0djS+dXhkMhkwla9+v6Axgx/N5/+mjP5p0oOX3y1JZbN17LA5KYX4E7P/t88ZwKFKg5WDsgy7EoE1J5E7Q4yDjEISuDpOvcAFAxehCLFEV++/PmpZutqDLprQmfLlwiDyrYVZLK3BkzF87WP4486mg/3HQGpp+zffLWRQJEh6VhXABZea3u9BGY6KhbvXzNmDdGw7TMdsVtn2wgxP5w9nhPvA/WCYsXkGGdQiZzg0ll74lDvf1xmicIrrvvX/IWSLhx93Zz2/Wq8sw8mTJ+IpCwv/FYOCTNnVFaaYD/ZEtTLBoxuXPoekxAUdVDFxrauzpCIYoFUSiORI2zXBO0uoYjlWXzEGwg4WTLhd5X/dtWri+Ev3dUrNghYtMrinuTlKULuyOsafAUYl7TUZ2Ea1XlH4E9IGFZxaI7D+9Vln2I5mH2Z+Bn2+VIRB4TIPquGlkS6iFihHzLinVdPS8L4e8bFYu5ssm6VqxG4WyyfXJL06oh6CTcuo7v3pk4ueKDMmzn4Hcx+1HRIwNwxIwf+6aoCZJlCg0kEn3/9dPPoMx2BKuWAI9x4ObjFn7Q9ZgAeDqxpzadPVkxAvJbf+nsrrpviikzIbcd6SsBtXT43Ww+xJ3HBERBpO0VsAqHKpe02lOHF8wqhxmFcexrONoTd7f5kAS8rwFiYngbHhmA/SQhy7ZTCMoNvQSlZiZuX7WRwA9SW1eua7zys6k6omoXvvCYABRba3Zv73z5wnYRO9Rh2cqnlOz9GAw5mINbxFCodXS/+Od5p/Ugg/2HVBCFYGGvoPIhAtmDuel1YsBRl4jnG97XABT6to9DBFBBQeFJKp8H7Y9b/2rDWJAEWdFL1HyAQ7W8JzCUZZv3sHcZK5/9jUdrfvyOUqLaqNsOBZeADr+h8jnX+uvte383t13DyHIksF45UCu4BLLwm+r+uCSKdQ31hSSUpDW8J9gibh4MKAG8dkEtjf5J5aMfzLnqSCchd1kzB2vXDygBAWY/9drlcFmzC7lwzEUCsD+SYh0a9HKt0IMgAPwLSudU5e7sTzqfGa9dSEKLgYSNSz6GK7XZCqXPepBBuIlB+fzvzZgDHLfQZcwBxKa9PeXiH1fxmg+fVXpfxQkWGNi3xw7CSkCD40rGwonG+FlFZP+vBLjPf9gShUg4/92Kgk5+ePg/bEEsAI+xgMlHx9DKnHoRpw9KcD0w3RAYrGZEXKwBRosBi/EEAgbc4o4zYIEk4AHOQMCAW9xxBiyQBDzAGQgYcIs7zoAFkoAHOAMBA25xxxmwQBLwwIhn4H+HbPh1vb4KDQAAAABJRU5ErkJggg==",
+    "author": "theluckystrike",
+    "configs": [
+      {
+        "command": "npx",
+        "args": ["-y", "mcp-remote", "https://mcp.zovo.one/mcp/currency/t/<token>"]
+      }
+    ]
+  },
   "e2b": {
     "name": "E2B",
     "description": "Run code in secure sandboxes hosted by E2B",
@@ -542,6 +568,19 @@
         "env": {
           "EXA_API_KEY": "your-api-key-here"
         }
+      }
+    ]
+  },
+  "expense tracker": {
+    "name": "Expense Tracker",
+    "description": "Local expenses, receipts and mileage ledger for freelancers: categorise, split VAT, summarise, export to CSV or xlsx and rebill into an invoice. Hosted endpoint needs a free token from https://mcp.zovo.one/mcp/connect, substituted for <token> in the args URL.",
+    "link": "https://github.com/theluckystrike/mcp-expense-tracker",
+    "icon": "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",
+    "author": "theluckystrike",
+    "configs": [
+      {
+        "command": "npx",
+        "args": ["-y", "mcp-remote", "https://mcp.zovo.one/mcp/expense-tracker/t/<token>"]
       }
     ]
   },
@@ -994,6 +1033,19 @@
       }
     ]
   },
+  "invoice": {
+    "name": "Invoice",
+    "description": "Make real, sendable PDF invoices from a sentence: clients, numbering that never repeats, VAT lines, discounts and overdue reports, all stored locally. Hosted endpoint needs a free token from https://mcp.zovo.one/mcp/connect, substituted for <token> in the args URL.",
+    "link": "https://github.com/theluckystrike/mcp-invoice",
+    "icon": "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAIAAAAlC+aJAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAQKADAAQAAAABAAAAQAAAAABGUUKwAAAEZklEQVRoBe1aS2gTQRjeV9IGIlax4COCRqwFX4ggvrCiHlo8iAh6ENoqtJ68CCoUnyAiongTD1pbRBAfF0XwgVpFUS+2YESw0Fao2kNbja2mu8lu/DZbNpvNziTp1G4Cuyxh5p//n/m//zHz77R8fXUjV8qPUMrK67p7ANz2oOcBzwOMFvBCiNGAzOKeB5hNyDiB5wFGAzKLex5gNiHjBCXvAYligEQ8oSU0CgNtiOf85X6TQRlTuOR4z1fm4wXeHHJsqHFVTajGkCAJko+oJ3FAVdWq1VVzw3McF8hJlGPyh2ed0AOcok/csGN9WaAM7WSS6+roGv05SsEA1cMrw/OrQsYq33t+dHd2i6LouCgRQEJJ1OzatHl3jaNYTiJU/Pg6gknACZM3nmwIzggaUid2nYoORmFW0iSQWrd9bd3+WoOh4/bLz+8/iwFnALQcQAiR1shJV2TFymN2k1oSr3XIsW3GD0bpahDNAElRcgbtuKSN6PP7bBSzCwPH5bgBA8FNiSVThNIgAhAEof9Lf+TNJ5uwpmkzZ88MLZ5n0Ed/jfZGenne7smRn781VeOQqzZz81z1miXTK6eLki7S9+nryPAICwYiAATukxtPH7U/tgFQYsq2vVsPnG826L2RvjN7z2bvEjzPw4H4TSJtLQ8oDSfrTcKFpovIdaxlUgptEAFgIkEU8NpmxMZqJUIhaJ8NwCZF6trgkdgodBoAithkDSEgkaNGCGGjnEAsuQBgoG9Ajik8r58JFbMqFq0IS6mMH/oxRD8fHK021QCw+Vw+dKUn0oOog+2Pth5pPtdkaHa15drzWy/8gfT57aixjTjVALA8MGCD0gQNv0ihdNjkKC9smo937TnqzDW5VJ7T9U492KzNuZHQOrDUm89hZwi64AFTY5wS0aHo8MAwKMgHf5m/MjTLV+5XYnJgWiDNRm25CUCSpNbj141NOT6mNJ5u3HN4Tyq5k/mfDG4CgGVRtBpHNeptIAkEy6nmdhh0GQASQS83OA6prLcLf1wGYFUYThj7MwYKshkhlOfpXiwAoPGdS3fvX3kAAEjinQd3ouKywiO1iwUA4gfHMCpTKCr/lWMjMZLGNnqxAIBaehqkEgLZnD7dbPpmddPnSNZQaRA8AG77qeQ9QEtiva7S7BdbqIFBN+2OPdvx1gC7CsudgDl/zgYRAC4O6vbVrtqyyjaF8VFvEhcuW3DsZovjR33r8Ta9UvjPDxEAFA1VhZZtWEpXIFgRXL5xeTYPdnS9Ssv4oM/mmgQKLQest0uFLhVX4oWKTIyfBiDPasRxYRT3VrrZ1U+rXDe7ELTmD10NYghJfunlvVe4VbXqkX8b0Y8sMgpMNNpOt5uXu4PfBkk3tcb8WPrtw3f93f1GF5e7oJCW5in/bqNvOKV7vQ7Euu8mfmWWYTLr3woyBggd3MjjJQxmkGk5kMFYrB0PgNue8TzgeYDRAl4IMRqQWdzzALMJGSfwPMBoQGZxzwPMJmScoOQ98A8ihHYg+l0XtwAAAABJRU5ErkJggg==",
+    "author": "theluckystrike",
+    "configs": [
+      {
+        "command": "npx",
+        "args": ["-y", "mcp-remote", "https://mcp.zovo.one/mcp/invoice/t/<token>"]
+      }
+    ]
+  },
   "jetbrains": {
     "name": "JetBrains",
     "description": "Work on your code with JetBrains IDEs",
@@ -1395,6 +1447,19 @@
       }
     ]
   },
+  "pdf": {
+    "name": "PDF",
+    "description": "Merge, split, extract, rotate, reorder and stamp PDF files from chat, for example mark an invoice PAID or join documents into one; everything stays on your machine. Hosted endpoint needs a free token from https://mcp.zovo.one/mcp/connect, substituted for <token> in the args URL.",
+    "link": "https://github.com/theluckystrike/mcp-pdf",
+    "icon": "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",
+    "author": "theluckystrike",
+    "configs": [
+      {
+        "command": "npx",
+        "args": ["-y", "mcp-remote", "https://mcp.zovo.one/mcp/pdf/t/<token>"]
+      }
+    ]
+  },
   "perplexity": {
     "name": "Perplexity",
     "description": "An MCP server that connects to Perplexity's Sonar API, enabling real-time web-wide research in conversational AI.",
@@ -1490,6 +1555,19 @@
           "COLLECTION_NAME": "your-collection-name",
           "EMBEDDING_MODEL": "sentence-transformers/all-MiniLM-L6-v2"
         }
+      }
+    ]
+  },
+  "quotes": {
+    "name": "Quotes",
+    "description": "Send a client a real quote in seconds: line items with VAT, validity date, plain-text version for email and an A4 PDF; accepting a quote turns it into an invoice with the same numbers. Hosted endpoint needs a free token from https://mcp.zovo.one/mcp/connect, substituted for <token> in the args URL.",
+    "link": "https://github.com/theluckystrike/mcp-quotes",
+    "icon": "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAQKADAAQAAAABAAAAQAAAAABGUUKwAAAEdElEQVR4Ae1ZW0gUURj+d3bXW2iGgUgqBBoRhlBEaZk9RBckeqkeQosIeqiXKDQIevSl8KUn6TUiuoC+JEU3QdSyQsNEvKWJaHkp8da6Ozvb/LM7p3X2zGXH2YFxzxHZmXP5zvm/8/3nnPmP625VYQiSOHFJbLtkOiOAKSDJGWAukOQCAKYApoAkZ4C5QJILgC2CzAWYCyQ5Ax4z9vP+VQiFBMNN3W4PcB6vZv1gwA+CENSsE0+hy+UCT0qabpP4CQiFoLjsOGRk5+iCyxVmxwZgarAHOJEIWhKCQSgsPQjZeYW0YlN5/pUlGP74GkKC9kTRR6TRZUgkoKKmFnKLSjRqrS361PQAJvq6VAkI8n7YU3URdlaeWttwHW+Ls1Pw/fN74IOrgGpQS6Z2AT6wqoZHzRf4ADU/OhNJsDLxfp8hOEMKQP/EmceEklKTslaPOCAX55aqcBwXsyborRFa2LQytzeFlh2Tp0uAy8WJ/lkO3tR0qTESMTc+CL7FedEgfQGFxIUNfby47IS4KKVKGEu/p2FmtJ+0R5zpkW+QnrUlZoCYgRhZufmQk19EylfmZ+HXSB/BIAWRh6W5n4YWapdWVBiNxUFfbnwHm3MLSB+Pbp6GsZ52MMJywLcClZduw+GLdaR9f2szNNVfIaRiAZKktrMgxv5z1+DY1XqCMdDeAs/u1BBSSUHkAf3eiFJ1FYB4QpBfg49SdovbGv7rJYFSB41VJs6N7hF2EWUZYnAR95HLUJlGxyC3of3qa5jWagPlMQI20GSaMoUpwBRtG6gRU8AGmkxTpiS9AgwdhOKlNvzd8P/bQTzixQthW/0EEIDH5zRySsTjqDvyDWCbVXF0ZDkB/KoPDlXXQsnRM9IwUA2pGZlxDMneqpYTgAanZ2VD5tY8ey0x2VtCFkG9MBSAeoTGpB2mm1muAOpIRFXgn5zUPnvlcjt/bSGg981T6HreKC2OaJxvaV71O95O47EvWwhYFiNAkwPd4E3LkOzDb/nw97/d5sb2ZwsBGPKyIngRO/z15xgiQBlawhhdECO9lHCzVj4XiQ47RgEYVxN4Hl40XCfxO9zmSk9WQ/n5G9SAJJIz3vsBHt86K/k53iIV7D4A1Q3NYv1wyOtHdxt0PLkPHm84SLr+eTSPoKsAXLHHv3asCYtXXKiDvB2lqr0Od72Foc6Xos9vgoBvGbbt2gfb9x4h9f8u/NG9sSGVE/ygSwD2Hx39xT1eGSRVjlG+l8OIMipCmYxclCjbJOrd1EFIT7rKNUP57vYYu7SINjoGw+DFRzQG7dmQAqIb4uy2PbyneTk6NdBDVIPqGep8BQszEwRmfmpc3BWMk4AYo19aoUU8P8hpYXpSxIh7+HJz8qt5MUJqKR70rsdxy4ueMXQZaXeI4GCMP9qtFPDUVyswaMCmKJSvuGiAtDwkI5oQWh29PCswaH2YWgNoQE7NYwQ4deasGjdTgFVMOhWHKcCpM2fVuJkCrGLSqThMAU6dOavGzRRgFZNOxWEKcOrMWTXuf/YvRzwO+GD/AAAAAElFTkSuQmCC",
+    "author": "theluckystrike",
+    "configs": [
+      {
+        "command": "npx",
+        "args": ["-y", "mcp-remote", "https://mcp.zovo.one/mcp/quotes/t/<token>"]
       }
     ]
   },
@@ -1696,6 +1774,19 @@
       }
     ]
   },
+  "spreadsheet": {
+    "name": "Spreadsheet",
+    "description": "Open, inspect, query, edit and convert xlsx and csv files locally from your AI assistant. Hosted endpoint needs a free token from https://mcp.zovo.one/mcp/connect, substituted for <token> in the args URL.",
+    "link": "https://github.com/theluckystrike/mcp-spreadsheet",
+    "icon": "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAIAAAAlC+aJAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAQKADAAQAAAABAAAAQAAAAABGUUKwAAAFMklEQVRoBe1YXWgcVRTeOzM7md1kk9r1NyFalEJAfVFBHxQRtIUoIlqFSIsVDUQLIj5IKYJoRRREiFAfFPFBKAhKRXwQH7T1oYht1fhHmqjUH1qizV93uzO7szPjN3vNzeyde+9OOkKyMMs+3HvuOd+55+eee+aSKx++IdfNP62bNx/uPTNgvSOYRSCLQEoPZCmU0oGpxbMIpHZhSoAsAikdmFo8i0BqF6YE6PoIGAkd0PSabrOZkBlshBDL7BHy19267wfCJSHR0PW8kRcugZjIgKbnXbdl5NotIzKUON2u25+dOOJ6LsmR6Comd99810Bvf5SoHv96+tTxmSmYIWRLZECj2dh+0x3P7JgQQgiJi9WlL7//CoIIBWMIgkDTtH1jT18zeBUjdhwc/PzQ0Z+PGXpByJn0DCCFhPIyotOoy5aQQrIlId1tukI6JaoigE17vgc+xW5k0GbejC413EaQQwACXdPyukppVIqODSW/FMvz/ZHhrVeULwMKfKZr+uGpo1AfVyCkzFcWYTwOAPZtaMZt198SmhQERCM//n7y9MKcFkktIQIjTv85q9ArNQCbfnT72M47H6BABz5+977nHyn2iBORKVsdEAJP4wD4gV8wrTefeuXigTJd3bb3oW9nf1AUllWQ1gjHpicvLmhYlxqANZo/DA4qk2tlUnTgrhwhP8yisCxeMBSHnDQlOLGNM80MWO9YdH0EVIdYI23mefi1rgW504ms3uHgUilUT9/3gaP5beAcJiFawjorNQAVcKm6fGZhDtDhDRQEw5cOoSBymqJTlJqzy/NRCh1DFjjUeFShzaVNw5cMGrq0P4NUxa5WatVoGxKHpRQie51Gu2jlzXxLTa1hP3nP7ifu3d3emPGYJ//4ZceLj+EG5BTjOitYlpbTcKnBr+/tPbB16Go11OSHb00eeruQ4NqRR6DVQdg5B9us1W3o7iv08ltunxetYjvhvxlkq3aNBhI5ZplWRyhc2wkbbqkBUA5H0mYYh4FzqnCjIOLexb8lFcowttY4bCu4c8UYuAGyjkKBDjSFdpUBDBQbQTdWdc4zimAQoOdzSoU+ZDlU+jnfdhzsOM5Zc2odoYDQXywVzbBzwUeF4zZWndGOKD0DUTb4o1Tsw+aiRG7c9Fxk9msTL1DH/710duyliYpTjbscTZG6IbUbzvjozvtvHaWO/+DIJ/sPvi6rH8kiQMi5WnX5/Dlu09EpuvZy/+ah8uWUiLopi/vc4j84D1FZblxzbMgOrkBt6huABzkeNk1kALhDvxLxRx3F8lHYNQ35QyOguDFkdwXbk97+9YjDwJbiA9VtEufegJTMgPUOStdHQHWIcRDReCV0MapQ2KKtXF5coQy/yOSVhFPBPUOwRpBjo1OpAfgmHh/dte3G24VicSLqz0Jladere3CF4urExYdyjmqICogv6cnx58qli+JSQgrcdmJm6sH9j9NP4TPzcxfyTUxfJfCaINQhJM7+9dueN56lzRyKLvoZeiXDhcBJbgDAv57+5tNjX/Ra4U0MccXLijQCkFzrYxbyBK6iBnAWIiAcpeMUT6sKxzNx1SFe68OBQp/soZftgxsoXM5zcnM2NQ3z/cMfHZ/5jlE6DtBrIOO5DgJTx63ve+flJM09U/HTqWlsgE0VA1Uzh2qAd2mFMLeEr0BZEPA4qehnOBxM84aRMAiqM/A/Pj+tNYXiJskoqjMgk9lQ9MyA9Q5HFoEsAik9kKVQSgemFs8ikNqFKQGyCKR0YGrxLAKpXZgSoOsj8C9C+781wMRa4QAAAABJRU5ErkJggg==",
+    "author": "theluckystrike",
+    "configs": [
+      {
+        "command": "npx",
+        "args": ["-y", "mcp-remote", "https://mcp.zovo.one/mcp/spreadsheet/t/<token>"]
+      }
+    ]
+  },
   "sqlite": {
     "name": "Sqlite",
     "description": "Database interaction and business intelligence capabilities",
@@ -1820,6 +1911,19 @@
           "THIRDWEB_ENGINE_AUTH_JWT": "(OPTIONAL) your engine auth jwt",
           "THIRDWEB_ENGINE_BACKEND_WALLET_ADDRESS": "(OPTIONAL) your engine backend wallet address"
         }
+      }
+    ]
+  },
+  "time tracker": {
+    "name": "Time Tracker",
+    "description": "Track billable time without leaving your AI chat: timers, entries, reports, CSV export and invoice line items, all stored locally. Hosted endpoint needs a free token from https://mcp.zovo.one/mcp/connect, substituted for <token> in the args URL.",
+    "link": "https://github.com/theluckystrike/mcp-time-tracker",
+    "icon": "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAIAAAAlC+aJAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAQKADAAQAAAABAAAAQAAAAABGUUKwAAACuElEQVRoBe1Yy2oUQRSd6tcYTMBMNj4XCoouFLdBJCGIC79AQVQQCegvuMjCpS5FQlZ+gbjQhcQYCAgBEcmoiQnoIvGxcRQSjVP98g4lZdndVTXNpYlDbq+q6p5zq+45Vb24bPDShVovf04vH75zdipgqx0kB8gBpAJ0hZACounkAFpCZAJyACkgmk4OoCVEJuh5BzyDADyKoiQ2AAwhVmN9QSABm5yntVROSw08xw087Tm1gSiOh48cPbx3T6nNJHizzR+9fBHGnfp91z1/6nRf/W89EtbNYOXT5/mVd57rFoK1BYD8F0dGL4+OFdKsi62NjafNBR79BOQOP7hz5Wqjv9/KKgTcn52ZW3yjK8D0BsIoKszYzeIvzlVYZqqGrGPzMUwF6Iq2bgmAuu+rsMxUDVnH5mNor5DrOG/XVp+9bmY2iJNkX6NxbP8BsQ5X5dWH94yxDOzr+jogxSoMIM/QwEAGk6bpyYOH5NVaXFv92GrBvhkYHCO/KDHM0JWAjeGTUDH4wdvXzpydHL8hpjPNhXO3Jvz8X4IxeLuS23nNafYvBHfj8c2JseMnBGx88u7U9JOdQV2yxMBxHEMBWgeADLQ8M0hidRG0h9MXFPDvKdRi1IhqHaSF36U1lUqHcdavTPj/n1IBW+0ROUAOIBWgK4QUEE0nB9ASIhOQA0gB0XRyAC0hMgE5gBQQTScH0BIiE5ADSAHR9G3pgNqVwHSsQH2Vrqbt3hhTW6UwC3Q+ni8tXZ+6J6Jfvn13lf5PIUW3CMTbDx/sHtwlAPPLy4YutC6JqbGl40RJwqNQRF3mqCrqKLr1dhjG6Z/eWQA9oVxbTkeU66UdACZs4+X6ZzJjqQGmeLHRtnzEpTSuGkwOVK2wLT85YFOo6jg5ULXCtvzkgE2hquPkQNUK2/KTAzaFqo73vAO/AYGkm1//Ka1mAAAAAElFTkSuQmCC",
+    "author": "theluckystrike",
+    "configs": [
+      {
+        "command": "npx",
+        "args": ["-y", "mcp-remote", "https://mcp.zovo.one/mcp/time-tracker/t/<token>"]
       }
     ]
   },
